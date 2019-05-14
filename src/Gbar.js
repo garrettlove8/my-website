@@ -11,7 +11,7 @@ function Gbar(props) {
     });
 
     return(
-        <Navbar bg="light" expand="lg">
+        <Navbar className="border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand href="#home">Garrett Love</Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
