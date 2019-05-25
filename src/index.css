@@ -2,6 +2,10 @@
   font-size: 144px;
 }
 
+.jumbo-title {
+  text-align: center;
+}
+
 /* Card */
 
 .g-card {
@@ -20,6 +24,7 @@
 
 .g-card-info {
   margin-top: 10px;
+  min-height: 100px;
 }
 
 

@@ -1,15 +1,14 @@
 import React from 'react';
 import Card from './Card';
 
-import devgrub from './assets/images/devgrub.png';
-import youtube from './assets/images/youtube.png';
-import evverest from './assets/images/evverest.png';
+import devgrub from '../assets/images/devgrub.png';
+import youtube from '../assets/images/youtube.png';
+import evverest from '../assets/images/evverest.png';
 
 class Rotator extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log('props: ', this.props.items);
         this.state = {
             items: [
                 {
@@ -50,9 +49,17 @@ class Rotator extends React.Component {
 
         items[id].selected = items[id].selected ? false : true;
 
+        items.forEach(item => {
+            if(item.id !== id) {
+                item.selected = false;
+            }
+        });
+
         this.setState((preState, props) => ({
             items
         }));
+
+        // console.log(this.state.items);
         
     }
 
