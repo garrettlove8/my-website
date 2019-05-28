@@ -1,4 +1,5 @@
 import React from 'react';
+import CardInfo from './CardInfo';
 
 class Card extends React.Component {
 
@@ -18,11 +19,7 @@ class Card extends React.Component {
 		return(
 			<div className="d-inline-block g-card" onClick={(e) => this.handleCardClick(this.props.item)}>
 				<img className="g-card-image" src={this.props.item.imgSrc} alt={this.props.item.image} />
-				<div className="g-card-info">
-					{ this.props.selected && <p className="g-card-title">{this.props.item.title}</p> }
-					{ this.props.selected && <p className="g-card-sub-title">{this.props.item.subTitle}</p> }
-					{ this.props.selected && <a className="btn btn-primary" href={this.props.item.link} target="_blank" rel="noopener noreferrer">View</a> }
-				</div>
+				{ this.props.selected && <CardInfo title={this.props.item.title} subTitle={this.props.item.subTitle} link={this.props.item.link}  /> }
 			</div>
 		);
 	}

@@ -1,5 +1,5 @@
 .text-huge {
-  font-size: 144px;
+  font-size: 136px;
 }
 
 .jumbo-title {
@@ -37,4 +37,16 @@
 .g-card-sub-title {
   font-size: 16px;
   margin: 0px;
+}
+
+
+.err-msg {
+  color: #EE6352;
+  padding: 10px 15px;
+}
+
+
+.success-msg {
+  color: #57A773;
+  padding: 10px 15px;
 }

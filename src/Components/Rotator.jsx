@@ -1,6 +1,9 @@
 import React from 'react';
 import Card from './Card';
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+
 import devgrub from '../assets/images/devgrub.png';
 import youtube from '../assets/images/youtube.png';
 import evverest from '../assets/images/evverest.png';
@@ -58,12 +61,10 @@ class Rotator extends React.Component {
         this.setState((preState, props) => ({
             items
         }));
-
-        // console.log(this.state.items);
         
     }
 
-
+    
     makeItems(items) {
         return items.map(item => {
             return <Card item={item} selected={item.selected} onClick={(e) => this.handleCardClick(item.id, e)} key={item.title} />;
@@ -73,9 +74,11 @@ class Rotator extends React.Component {
 
     render() {
         return(
-            <div className="row justify-content-around">
-                {this.makeItems(this.state.items)}
-            </div>
+            <Container fluid="true">
+                <Row className="justify-content-around">
+                    {this.makeItems(this.state.items)}
+                </Row>
+            </Container>
         );
     }
 
